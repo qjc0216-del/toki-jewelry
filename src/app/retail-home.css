@@ -1,0 +1,134 @@
+/* TOKI retail homepage — structure inspired by modern performance ecommerce, with original TOKI branding */
+
+.announcement{display:flex;justify-content:center;align-items:center;gap:16px;background:#642d3a;color:#fff;padding:9px 18px;font-size:12px;letter-spacing:.02em}
+.announcement a{font-weight:700;text-decoration:underline;text-underline-offset:3px}
+
+.utility-bar{min-height:34px;display:grid;grid-template-columns:1fr auto;align-items:center;padding:0 36px;background:#f6f6f6;border-bottom:1px solid #ece9e6;font-size:11px;color:#555}
+.utility-bar nav{display:flex;gap:22px}
+.utility-bar a:hover{color:#642d3a}
+
+.retail-header.site-header{height:78px;display:grid;grid-template-columns:auto 1fr auto;gap:38px;padding:0 36px;background:#fff;border-bottom:1px solid #e7e4e0;position:sticky;top:0;z-index:60;backdrop-filter:none}
+.retail-logo.header-logo{justify-content:flex-start;min-width:0}
+.retail-logo .brand-logo--compact img{width:148px}
+.retail-nav{display:flex;align-items:center;gap:26px;font-size:13px;font-weight:700;white-space:nowrap}
+.retail-nav a{position:relative;padding:29px 0}
+.retail-nav a:after{content:"";position:absolute;left:0;right:0;bottom:18px;height:2px;background:#642d3a;transform:scaleX(0);transform-origin:center;transition:.2s}
+.retail-nav a:hover:after{transform:scaleX(1)}
+.retail-actions{gap:14px}
+.header-search{width:210px;height:40px;border:1px solid #cfcac5;border-radius:4px;display:flex;align-items:center;gap:9px;padding:0 12px;background:#fff}
+.header-search input{width:100%;border:0;outline:0;background:transparent;font-size:13px}
+.retail-actions .cart-link{align-items:center}
+.retail-actions .cart-link span{background:#642d3a}
+
+.lulu-home{background:#fff}
+.retail-hero{position:relative;min-height:74vh;overflow:hidden;background:#222}
+.retail-hero-media{position:absolute;inset:0}
+.retail-hero-media:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.58) 0%,rgba(0,0,0,.24) 46%,rgba(0,0,0,.08) 75%)}
+.retail-hero-content{position:relative;z-index:2;min-height:74vh;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;padding:72px 5vw;color:#fff;max-width:760px}
+.retail-hero-content>p:first-child,.wide-campaign-copy>p,.everyday-banner-copy>p:first-child{font-size:12px;font-weight:800;letter-spacing:.12em;margin:0 0 16px}
+.retail-hero h1{font:700 clamp(52px,6.4vw,94px)/.92 Arial,Helvetica,sans-serif;letter-spacing:-.055em;margin:0 0 22px;max-width:700px}
+.retail-hero-copy{max-width:570px;font-size:18px;line-height:1.55;margin:0;color:#f3f1ee}
+.retail-hero-actions{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}
+.retail-btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border:1px solid transparent;font-size:13px;font-weight:800;letter-spacing:.01em;transition:.2s}
+.retail-btn--light{background:#fff;color:#1e1c1b}
+.retail-btn--light:hover{background:#f0ece8}
+.retail-btn--ghost{border-color:#fff;color:#fff;background:rgba(0,0,0,.08)}
+.retail-btn--ghost:hover{background:#fff;color:#1e1c1b}
+.retail-btn--dark{background:#1e1c1b;color:#fff}
+.retail-btn--dark:hover{background:#642d3a}
+
+.campaign-intro{max-width:960px;margin:0 auto;padding:64px 30px 70px;text-align:center}
+.campaign-intro h2{font-size:clamp(34px,4vw,54px);line-height:1.05;letter-spacing:-.04em;margin:0 0 18px;font-weight:800}
+.campaign-intro p{max-width:720px;margin:0 auto;color:#66615d;font-size:17px;line-height:1.65}
+
+.feature-pair{display:grid;grid-template-columns:1fr 1fr;gap:22px;padding:0 34px 86px;max-width:1580px;margin:auto}
+.feature-story-image{position:relative;aspect-ratio:4/5;background:#eee}
+.feature-story-copy{padding:22px 4px 0}
+.feature-story-copy h3{font-size:30px;line-height:1.08;letter-spacing:-.035em;margin:0 0 12px}
+.feature-story-copy p{font-size:15px;line-height:1.6;color:#68625e;max-width:560px;margin:0 0 15px}
+.feature-story-copy a,.retail-shelf-head>a{font-size:14px;font-weight:800;border-bottom:1px solid currentColor;padding-bottom:2px}
+.feature-story-copy a:hover,.retail-shelf-head>a:hover{color:#642d3a}
+
+.retail-shelf{max-width:1580px;margin:auto;padding:78px 34px 96px}
+.retail-shelf-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:30px}
+.retail-shelf-head p{margin:0 0 8px;font-size:12px;font-weight:800;color:#642d3a;letter-spacing:.09em;text-transform:uppercase}
+.retail-shelf-head h2{margin:0;font-size:clamp(34px,4vw,52px);letter-spacing:-.04em;line-height:1;font-weight:800}
+.retail-product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.retail-product-grid .product-price{font-size:22px;font-weight:800;color:#1e1c1b}
+.retail-product-grid .product-title{font-size:15px}
+.retail-product-grid .product-note{font-size:12px}
+
+.wide-campaign{display:grid;grid-template-columns:1.38fr .62fr;min-height:690px;background:#f4f1ed}
+.wide-campaign-media{position:relative;min-height:690px}
+.wide-campaign-copy{display:flex;flex-direction:column;justify-content:center;padding:70px 6vw}
+.wide-campaign-copy>p{color:#642d3a}
+.wide-campaign-copy h2{font-size:clamp(42px,4.7vw,70px);line-height:.98;letter-spacing:-.05em;margin:0 0 32px;font-weight:800}
+.wide-campaign-copy .retail-btn{align-self:flex-start}
+
+.category-strip{max-width:1580px;margin:auto;padding:92px 34px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.category-tile>div{position:relative;aspect-ratio:4/5;background:#eee;overflow:hidden}
+.category-tile img{transition:transform .5s ease}
+.category-tile:hover img{transform:scale(1.025)}
+.category-tile span{display:block;font-size:18px;font-weight:800;margin-top:12px}
+
+.everyday-banner{display:grid;grid-template-columns:.72fr 1.28fr;min-height:640px;background:#efe8e5}
+.everyday-banner-copy{padding:78px 7vw;display:flex;flex-direction:column;justify-content:center}
+.everyday-banner-copy>p:first-child{color:#642d3a}
+.everyday-banner-copy h2{font-size:clamp(42px,5vw,72px);line-height:.96;letter-spacing:-.05em;margin:0 0 22px}
+.everyday-banner-copy>p:not(:first-child){max-width:520px;color:#625d59;line-height:1.65;font-size:16px;margin:0 0 28px}
+.everyday-banner-copy .retail-btn{align-self:flex-start}
+.everyday-banner-image{position:relative;min-height:640px}
+
+.service-row{display:grid;grid-template-columns:repeat(4,1fr);max-width:1580px;margin:auto;padding:42px 34px 70px;border-top:1px solid #e8e4df;gap:28px}
+.service-row div{display:flex;flex-direction:column;gap:6px}
+.service-row strong{font-size:14px}
+.service-row span{font-size:12px;color:#77716d}
+
+.retail-newsletter{margin-top:0}
+
+@media(max-width:1180px){
+  .retail-header.site-header{grid-template-columns:auto 1fr auto;padding:0 20px;gap:18px}
+  .retail-nav{gap:15px;font-size:12px}
+  .header-search{width:150px}
+  .retail-logo .brand-logo--compact img{width:130px}
+}
+
+@media(max-width:900px){
+  .utility-bar{display:none}
+  .retail-header.site-header{height:70px;grid-template-columns:auto 1fr auto;padding:0 18px}
+  .mobile-menu-button{display:block}
+  .retail-nav{display:none}
+  .retail-logo.header-logo{justify-content:center}
+  .header-search{display:none}
+  .retail-hero,.retail-hero-content{min-height:68vh}
+  .retail-hero-content{padding:42px 24px}
+  .feature-pair{grid-template-columns:1fr;padding:0 18px 64px}
+  .retail-shelf{padding:60px 18px 72px}
+  .retail-product-grid{grid-template-columns:repeat(2,1fr);gap:14px}
+  .wide-campaign{grid-template-columns:1fr}
+  .wide-campaign-media{min-height:58vh}
+  .wide-campaign-copy{padding:52px 24px 62px}
+  .category-strip{padding:68px 18px;grid-template-columns:repeat(3,1fr);gap:10px}
+  .everyday-banner{grid-template-columns:1fr}
+  .everyday-banner-image{min-height:58vh;order:1}
+  .everyday-banner-copy{padding:54px 24px 64px;order:2}
+  .service-row{grid-template-columns:repeat(2,1fr);padding:36px 18px 56px}
+}
+
+@media(max-width:620px){
+  .announcement{font-size:10px;gap:10px}
+  .retail-hero,.retail-hero-content{min-height:72vh}
+  .retail-hero-media:after{background:linear-gradient(0deg,rgba(0,0,0,.66) 0%,rgba(0,0,0,.14) 65%)}
+  .retail-hero h1{font-size:50px;max-width:90%}
+  .retail-hero-copy{font-size:15px}
+  .retail-hero-actions{width:100%}
+  .retail-btn{min-width:0;padding:0 18px}
+  .campaign-intro{padding:48px 22px 54px;text-align:left}
+  .feature-story-copy h3{font-size:25px}
+  .retail-shelf-head{align-items:flex-start}
+  .retail-shelf-head>a{display:none}
+  .retail-product-grid .product-price{font-size:20px}
+  .category-strip{grid-template-columns:1fr;gap:34px}
+  .category-tile>div{aspect-ratio:5/6}
+  .service-row{grid-template-columns:1fr 1fr;gap:26px 14px}
+}
