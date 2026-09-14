@@ -4,13 +4,14 @@ import BrandLogo from "@/components/BrandLogo";
 export default function Footer() {
   return (
     <footer className="footer">
-      <div className="footer-brand"><BrandLogo light /><p>Modern keepsakes for women who choose their own rhythm.</p></div>
-      <div className="footer-cols">
-        <div><h4>Shop</h4><Link href="/collections/baroque-pearl">Baroque Pearls</Link><a href="#new">New Arrivals</a><a href="#">Gift Edit</a></div>
-        <div><h4>About</h4><a href="#story">Our Story</a><a href="#craft">Materials & Care</a><a href="#">Journal</a></div>
-        <div><h4>Help</h4><a href="#">Shipping</a><a href="#">Returns</a><a href="#">Contact</a></div>
+      <div className="footer-top">
+        <div className="footer-brand"><BrandLogo light /><p>Modern keepsakes for women who move in their own rhythm.</p></div>
+        <div className="footer-cols">
+          <div><h4>Shop</h4><Link href="/collections/baroque-pearl">Baroque pearls</Link><Link href="/#shop">New in</Link><Link href="/collections/baroque-pearl#earrings">Earrings</Link><Link href="/collections/baroque-pearl#rings">Rings</Link></div>
+          <div><h4>TOKI</h4><Link href="/#story">Our story</Link><a href="mailto:hello@toki.example">Contact</a><a href="#">Shipping & returns</a><a href="#">Care</a></div>
+        </div>
       </div>
-      <div className="footer-bottom"><span>© 2026 TOKI. Wear Your Own Time.</span><span>Instagram · Pinterest · TikTok</span></div>
+      <div className="footer-bottom"><span>© 2026 TOKI</span><span>Wear Your Own Time.</span><span>Instagram · Pinterest · TikTok</span></div>
     </footer>
   );
 }
