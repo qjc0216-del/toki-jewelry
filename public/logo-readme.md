@@ -1,1 +1,0 @@
-Canonical web logo: `toki-logo-final.png`. This is the exact user-approved master lockup and must be used instead of redrawing the monogram.

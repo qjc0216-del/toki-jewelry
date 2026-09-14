@@ -1,1 +1,0 @@
-Canonical logo image should be stored at public/toki-logo-final.png and used directly in the site header. It must match the approved TOKI lockup exactly.

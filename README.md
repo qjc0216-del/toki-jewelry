@@ -1,25 +1,19 @@
 # TOKI Jewelry
 
-Luxury editorial e-commerce storefront for TOKI Jewelry.
+TOKI Jewelry headless storefront, rebuilt on the architecture and interaction model of
+[jobyjoseph/headless-shopify](https://github.com/jobyjoseph/headless-shopify) (MIT).
 
-Brand direction: baroque pearls, warm ivory, burgundy, espresso and champagne-gold details.
+## Direction
+- Young quiet-luxury jewelry aesthetic
+- TOKI master logo and burgundy/ivory palette
+- Clear product pricing and strong mobile hierarchy
+- Next.js App Router + Shopify Storefront API-ready integration
+- Local fallback catalog for preview before Shopify credentials are connected
 
-## Stack
+## Run
+1. `npm install` or `pnpm install`
+2. Copy `.env.example` to `.env.local`
+3. Add Shopify Storefront API values when ready
+4. `npm run dev`
 
-- Next.js 15
-- React 19
-- TypeScript
-- Responsive CSS
-
-## Development
-
-```bash
-npm install
-npm run dev
-```
-
-Open `http://localhost:3000`.
-
-## Brand line
-
-**TOKI — Wear Your Own Time.**
+If Shopify variables are not configured, the site automatically uses the preview catalog in `src/lib/catalog.ts`.

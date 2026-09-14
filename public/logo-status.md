@@ -1,1 +1,0 @@
-Canonical logo asset integration in progress.
