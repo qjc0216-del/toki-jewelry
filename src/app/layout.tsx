@@ -3,6 +3,7 @@ import { CartProvider } from "@/components/CartProvider";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import "./global.css";
+import "./retail-home.css";
 
 export const metadata: Metadata = {
   title: "TOKI Jewelry — Wear Your Own Time",
