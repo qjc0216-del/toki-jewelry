@@ -10,82 +10,86 @@ export default function Home() {
     <main>
       <SiteHeader />
 
-      <section className="hero">
-        <div className="hero-copy">
-          <p className="eyebrow">TOKI JEWELRY · BAROQUE PEARL 01</p>
-          <h1>Nature never<br />repeats itself.</h1>
-          <p className="hero-lead">Neither should you.</p>
-          <p className="hero-body">Irregular pearls, soft gold and modern silhouettes — pieces chosen for the woman you are becoming.</p>
+      <section className="hero-young">
+        <div className="hero-young-media">
+          <Image src={media.portrait} alt="TOKI woman wearing contemporary jewelry" fill priority sizes="(max-width: 800px) 100vw, 58vw" />
+          <div className="hero-badge">Baroque Pearl 01</div>
+        </div>
+        <div className="hero-young-copy">
+          <p className="hero-kicker">TOKI Jewelry</p>
+          <h1>Pearls with<br />personality.</h1>
+          <p className="hero-lead">Organic shapes. Soft gold. Modern pieces made to feel like you, not everyone else.</p>
           <div className="hero-actions">
-            <Link className="btn primary" href="/collections/baroque-pearl">Shop Baroque Pearls</Link>
-            <a className="text-link" href="#story">Discover TOKI <span>↗</span></a>
+            <Link className="btn primary" href="/collections/baroque-pearl">Shop the pearl edit</Link>
+            <a className="plain-link" href="#shop">See bestsellers</a>
           </div>
-        </div>
-        <div className="hero-media">
-          <Image src={media.portrait} alt="TOKI woman wearing baroque pearl jewelry" fill priority sizes="(max-width: 800px) 100vw, 56vw" />
-          <div className="hero-caption"><span>01</span><p>BAROQUE PEARL<br />COLLECTION</p></div>
+          <p className="hero-note">Natural baroque pearls · Each one visually unique</p>
         </div>
       </section>
 
-      <section className="philosophy-strip">
-        <p>REAL PEARLS</p><i />
-        <p>IRREGULAR BY NATURE</p><i />
-        <p>MODERN KEEPSAKES</p><i />
-        <p>WEAR YOUR OWN TIME</p>
-      </section>
+      <nav className="shop-nav" aria-label="Shop by category">
+        <Link href="/#shop">New in</Link>
+        <Link href="/collections/baroque-pearl#earrings">Earrings</Link>
+        <Link href="/collections/baroque-pearl#necklaces">Necklaces</Link>
+        <Link href="/collections/baroque-pearl#rings">Rings</Link>
+        <Link href="/collections/baroque-pearl">All pearls</Link>
+      </nav>
 
-      <section className="section collection-intro" id="new">
-        <div className="section-heading split-heading">
-          <div><p className="eyebrow">THE FIRST EDIT</p><h2>Pieces that feel<br />already yours.</h2></div>
-          <p>Not perfection. Character. Each pearl carries its own surface, contour and light — the details that make it impossible to duplicate.</p>
-        </div>
-        <div className="category-grid">
-          <Link href="/collections/baroque-pearl#earrings" className="category-card tall"><Image src={media.earrings} alt="Baroque pearl earrings" fill /><div><span>01</span><h3>Earrings</h3><p>Light, movement, individuality.</p></div></Link>
-          <Link href="/collections/baroque-pearl#rings" className="category-card"><Image src={media.ringsSatin} alt="Baroque pearl ring" fill /><div><span>02</span><h3>Rings</h3><p>Sculptural details for every day.</p></div></Link>
-          <Link href="/collections/baroque-pearl#necklaces" className="category-card"><Image src={media.pearls} alt="Baroque pearl necklace" fill /><div><span>03</span><h3>Necklaces</h3><p>Modern keepsakes, close to you.</p></div></Link>
-        </div>
-      </section>
-
-      <section className="section products-section">
-        <div className="section-heading product-heading"><div><p className="eyebrow">THE TOKI EDIT</p><h2>Signature pieces</h2></div><Link href="/collections/baroque-pearl" className="text-link">View all pieces <span>↗</span></Link></div>
-        <div className="product-grid">{products.map((p, i) => <ProductCard key={p.slug} product={p} index={i} />)}</div>
-      </section>
-
-      <section className="editorial" id="story">
-        <div className="editorial-image"><Image src={media.portrait} alt="TOKI editorial portrait" fill /></div>
-        <div className="editorial-copy">
-          <p className="eyebrow light">OUR STORY</p>
-          <h2>More than jewelry.<br />A part of your story.</h2>
-          <p>TOKI is about time — not the kind measured by a clock, but the kind you remember. A morning you chose yourself. A city you finally visited. A version of you that felt more certain.</p>
-          <p>We create pieces to live inside those moments.</p>
-          <a className="light-link" href="#craft">Our philosophy <span>↗</span></a>
-        </div>
-      </section>
-
-      <section className="section craft" id="craft">
-        <div className="craft-copy">
-          <p className="eyebrow">NATURALLY UNIQUE</p>
-          <h2>Imperfection is<br />the signature.</h2>
-          <p>Baroque pearls grow without a template. Their ridges, curves and subtle variations are not flaws to hide — they are the reason no two TOKI pieces feel exactly the same.</p>
-          <div className="craft-points">
-            <div><span>01</span><h4>Selected for character</h4><p>Shape, lustre and personality over uniformity.</p></div>
-            <div><span>02</span><h4>Designed for now</h4><p>Clean, modern settings balance organic pearl forms.</p></div>
-            <div><span>03</span><h4>Made to be kept</h4><p>Jewelry meant to gather memory, not chase a season.</p></div>
+      <section className="shop-section" id="shop">
+        <div className="shop-heading">
+          <div>
+            <p className="section-kicker">The TOKI edit</p>
+            <h2>Wear now. Keep forever.</h2>
           </div>
+          <Link href="/collections/baroque-pearl" className="plain-link">Shop all</Link>
         </div>
-        <div className="craft-image"><Image src={media.ringsBook} alt="TOKI rings and baroque pearl jewelry" fill /></div>
+        <div className="product-grid">{products.map((p) => <ProductCard key={p.slug} product={p} />)}</div>
       </section>
 
-      <section className="store-story">
-        <Image src={media.ringsSatin} alt="TOKI boutique mood" fill />
-        <div className="store-overlay"><p className="eyebrow light">A TOKI WORLD</p><h2>Wear your own time.</h2><p>Soft light. Quiet confidence. Objects worth keeping.</p><Link className="btn ivory" href="/collections/baroque-pearl">Enter the collection</Link></div>
+      <section className="style-story">
+        <div className="style-story-copy">
+          <p className="section-kicker">Baroque, but make it everyday</p>
+          <h2>Less “special occasion.”<br />More your signature.</h2>
+          <p>Irregular pearls bring texture and character without trying too hard. Wear one statement piece or layer them into your everyday look.</p>
+          <Link className="btn dark" href="/collections/baroque-pearl">Explore Baroque Pearl</Link>
+        </div>
+        <div className="style-story-grid">
+          <div className="style-shot large"><Image src={media.earrings} alt="Baroque pearl earrings" fill /></div>
+          <div className="style-shot"><Image src={media.ringsSatin} alt="Modern pearl ring" fill /></div>
+          <div className="style-shot"><Image src={media.pearls} alt="Baroque pearl necklace" fill /></div>
+        </div>
       </section>
 
-      <section className="newsletter">
-        <p className="eyebrow">TOKI NOTES</p>
-        <h2>A little beauty,<br />sent slowly.</h2>
-        <p>New pieces, styling stories and the quiet things worth noticing.</p>
-        <form className="newsletter-form"><input type="email" placeholder="Email address" aria-label="Email address" /><button type="submit">Join the list</button></form>
+      <section className="category-edit">
+        <Link href="/collections/baroque-pearl#earrings" className="category-edit-card">
+          <Image src={media.earrings} alt="Shop earrings" fill />
+          <div><h3>Earrings</h3><span>Shop the edit</span></div>
+        </Link>
+        <Link href="/collections/baroque-pearl#rings" className="category-edit-card">
+          <Image src={media.ringsBook} alt="Shop rings" fill />
+          <div><h3>Rings</h3><span>Shop the edit</span></div>
+        </Link>
+        <Link href="/collections/baroque-pearl#necklaces" className="category-edit-card">
+          <Image src={media.pearls} alt="Shop necklaces" fill />
+          <div><h3>Necklaces</h3><span>Shop the edit</span></div>
+        </Link>
+      </section>
+
+      <section className="brand-story-modern" id="story">
+        <div className="brand-story-logo">
+          <img src="/toki-logo-final.webp" alt="TOKI — Wear Your Own Time" />
+          <span>JEWELRY</span>
+        </div>
+        <div className="brand-story-copy">
+          <h2>Jewelry for the version of you you’re becoming.</h2>
+          <p>TOKI is about time — the moments that change your pace, your taste, and the way you see yourself. We make modern keepsakes to live inside those moments.</p>
+          <p className="brand-quote">Wear Your Own Time.</p>
+        </div>
+      </section>
+
+      <section className="newsletter-modern">
+        <div><p className="section-kicker">TOKI Notes</p><h2>New pieces. Good styling.<br />No noise.</h2></div>
+        <form className="newsletter-form"><input type="email" placeholder="Email address" aria-label="Email address" /><button type="submit">Join</button></form>
       </section>
 
       <Footer />
