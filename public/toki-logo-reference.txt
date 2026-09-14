@@ -1,0 +1,1 @@
+The canonical TOKI logo is stored in the conversation asset; website code should use /toki-logo-final.png once the binary asset is committed. Do not redraw the monogram in CSS or SVG paths.
