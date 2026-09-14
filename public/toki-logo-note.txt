@@ -1,0 +1,1 @@
+Binary canonical logo asset will be committed as public/toki-logo-final.png. Keep this filename stable across header/footer/SEO assets.
